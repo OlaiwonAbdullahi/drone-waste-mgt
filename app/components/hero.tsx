@@ -3,36 +3,43 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen px-6 md:px-12 lg:px-[85px] py-16 lg:py-[70px] rounded-b-[80px] text-white">
-      <div className=" absolute top-0 left-0 w-full h-full -z-30">
+    <section className="relative min-h-screen flex items-center px-6 md:px-12 lg:px-[85px] py-16 lg:py-[70px] text-white overflow-hidden rounded-b-[60px] md:rounded-b-[80px]">
+      <div className="absolute inset-0 -z-30">
         <video
           src="https://res.cloudinary.com/du7ljfa63/video/upload/v1755691454/13772-251867974_small_myinco.mp4"
           autoPlay
           loop
           muted
+          playsInline
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
-      <div className="space-y-6 w-3/4">
-        <h2 className="font-semibold text-3xl lg:text-[50px] leading-18 uppercase">
-          Revolutionizing Waste <br /> Management with
-          <br /> AI-powered Drones
+
+      <div className="relative z-10 max-w-4xl space-y-6 text-center md:text-left mx-auto md:mx-0">
+        <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[50px] leading-tight uppercase">
+          Revolutionizing Waste <br className="hidden sm:block" /> Management
+          with <br className="hidden sm:block" />
+          AI-powered Drones
         </h2>
-        <p className="font-extralight text-[18px] leading-relaxed md:leading-[35px] max-w-2xl">
-          The Drone Waste Management System is an advanced solution developed by
-          Silvera Automotives that leverages AI and drone technology to
-          revolutionize waste management processes. Our goal is to enhance
-          sustainability efforts and promote effective recycling practices
-          through the automation and optimization of waste collection and
-          recycling operations.
+
+        <p className="font-light text-base sm:text-lg md:text-xl leading-relaxed md:leading-[32px] max-w-2xl mx-auto md:mx-0">
+          The Drone Waste Management System by Silvera Automotives leverages AI
+          and drone technology to revolutionize waste processes. Our mission is
+          to enhance sustainability and promote effective recycling through
+          automated waste collection and optimized operations.
         </p>
-        <div className="flex items-center justify-start gap-6">
-          <Button variant={"secondary"} className=" rounded-none font-medium">
+
+        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6">
+          <Button
+            variant={"secondary"}
+            className="rounded-none font-medium w-full sm:w-auto"
+          >
             Learn More
           </Button>
           <Button
             variant={"outline"}
-            className=" rounded-none font-medium text-secondary bg-transparent"
+            className="rounded-none font-medium text-secondary bg-transparent w-full sm:w-auto"
           >
             Join the Movement
           </Button>
@@ -40,7 +47,7 @@ const Hero = () => {
       </div>
 
       <svg
-        className="absolute bottom-0 left-0 w-full h-[80px] lg:h-[120px]"
+        className="absolute bottom-0 left-0 w-full h-[60px] sm:h-[80px] lg:h-[120px]"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
