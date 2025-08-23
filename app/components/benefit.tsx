@@ -56,7 +56,7 @@ const Benefit = () => {
                 <BadgeDollarSign />
               </div>
               <h2 className="text-xl font-bold text-white group-hover:text-blue-500 transition-colors duration-300">
-                Cost Savings:
+                Cost Savings
               </h2>
             </div>
             <p className="text-gray-300 leading-relaxed">
@@ -72,7 +72,7 @@ const Benefit = () => {
                 <Globe2 />
               </div>
               <h2 className="text-xl font-bold text-white group-hover:text-blue-500 transition-colors duration-300">
-                Environmental Sustainability:
+                Environmental Sustainability
               </h2>
             </div>
             <p className="text-gray-300 leading-relaxed">
