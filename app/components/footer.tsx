@@ -1,11 +1,13 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-secondary py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 items-start gap-8">
         <div>
           <div className="">
             <Image src={"/logo.png"} height={254} width={254} alt="logo" />
@@ -84,7 +86,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact & Socials */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Connect With Us
@@ -107,11 +108,37 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className="">
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Subscribe For Update
+          </h3>
+          <form className=" space-y-3 flex flex-col">
+            <Input
+              type="name"
+              placeholder="First Name"
+              className=" rounded-none placeholder:text-white text-white p-2"
+            />
+            <Input
+              type="name"
+              placeholder="Last Name"
+              className=" rounded-none placeholder:text-white text-white p-2"
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              className=" rounded-none placeholder:text-white text-white p-2"
+            />
+            <div className="justify-end flex">
+              <Button variant={"secondary"} className="  rounded-none  w-fit">
+                Subscribe
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Silvera Automotives. All rights reserved.
+        © {new Date().getFullYear()} Lisa Tech. All rights reserved.
       </div>
     </footer>
   );
