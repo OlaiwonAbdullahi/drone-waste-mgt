@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -20,24 +21,28 @@ const Navbar = () => {
       className="bg-primary text-white p-4 lg:px-[65px] md:px-8 px-4 min-h-20 flex flex-col justify-center relative"
     >
       <div className="flex justify-between items-center">
-        <div className="text-xl md:text-2xl font-semibold z-20">
-          DroneWasteMgt
+        <div className="">
+          <Image src={"/logo.png"} height={154} width={154} alt="logo" />
         </div>
-
         <nav className="hidden lg:flex space-x-8 uppercase">
           <div className="hover:border-b-2 transition-all duration-200">
             <a href="#home" className="py-1">
-              Home
+              Solutions
             </a>
           </div>
           <div className="hover:border-b-2 transition-all duration-200">
             <a href="#about" className="py-1">
-              About Us
+              Verticals
             </a>
           </div>
           <div className="hover:border-b-2 transition-all duration-200">
             <a href="#benefit" className="py-1">
-              Benefit and Impact
+              LISA
+            </a>
+          </div>
+          <div className="hover:border-b-2 transition-all duration-200">
+            <a href="#benefit" className="py-1">
+              Request a demo
             </a>
           </div>
         </nav>
@@ -47,7 +52,7 @@ const Navbar = () => {
             variant={"secondary"}
             className="rounded-none cursor-pointer font-medium"
           >
-            Fund Us
+            Find Us
           </Button>
         </div>
 

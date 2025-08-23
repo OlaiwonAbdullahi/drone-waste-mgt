@@ -18,16 +18,14 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-4xl space-y-6 text-center md:text-left mx-auto md:mx-0">
         <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[50px] leading-tight uppercase">
-          Revolutionizing Waste <br className="hidden sm:block" /> Management
-          with <br className="hidden sm:block" />
-          AI-powered Drones
+          Intelligent Aerial <br className="hidden sm:block" />
+          Survallance for <br className="hidden sm:block" />a Sustainable Future
         </h2>
 
         <p className="font-light text-base sm:text-lg md:text-xl leading-relaxed md:leading-[32px] max-w-2xl mx-auto md:mx-0">
-          The Drone Waste Management System by Silvera Automotives leverages AI
-          and drone technology to revolutionize waste processes. Our mission is
-          to enhance sustainability and promote effective recycling through
-          automated waste collection and optimized operations.
+          Proven AI-powerd drons intelligently identify ,map,and report waste
+          supporting faster cleanup efforts,protecting public health,and
+          advancing environmental sustainability.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6">
@@ -35,13 +33,13 @@ const Hero = () => {
             variant={"secondary"}
             className="rounded-none font-medium w-full sm:w-auto"
           >
-            Learn More
+            Get Started
           </Button>
           <Button
             variant={"outline"}
             className="rounded-none font-medium text-secondary bg-transparent w-full sm:w-auto"
           >
-            Join the Movement
+            Request a Demo
           </Button>
         </div>
       </div>

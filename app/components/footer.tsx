@@ -1,16 +1,26 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-secondary py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">DroneWasteMgt</h2>
+          <div className="">
+            <Image src={"/logo.png"} height={254} width={254} alt="logo" />
+          </div>{" "}
           <p className="text-sm leading-relaxed">
-            Revolutionizing waste management with AI-powered drones. Silvera
-            Automotives is driving sustainability through automation, recycling,
-            and clean innovation.
+            Lisa Technology summary{" "}
+            <span className="font-semibold">AI-powered autonomous drones</span>{" "}
+            to detect, map, and report waste and debris on roadways in real
+            time. By combining{" "}
+            <span className="font-semibold">
+              computer vision, machine learning, GPS tracking, and instant data
+              processing
+            </span>
+            , we provide accurate insights that support faster cleanup, protect
+            public health, and promote environmental sustainability.
           </p>
         </div>
 
@@ -27,17 +37,10 @@ const Footer = () => {
                 href="#about"
                 className="hover:text-blue-400 transition-colors"
               >
-                About Us
+                LISA
               </a>
             </li>
-            <li>
-              <a
-                href="#problem"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Problem
-              </a>
-            </li>
+
             <li>
               <a
                 href="#solution"
@@ -48,10 +51,34 @@ const Footer = () => {
             </li>
             <li>
               <a
+                href="#solution"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Vertical
+              </a>
+            </li>
+            <li>
+              <a
                 href="#impact"
                 className="hover:text-blue-400 transition-colors"
               >
                 Benefits & Impact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#impact"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Join the Movement
+              </a>
+            </li>
+            <li>
+              <a
+                href="#impact"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Book A Demo
               </a>
             </li>
           </ul>

@@ -1,11 +1,12 @@
 import React from "react";
 import { BadgeDollarSign, Globe2, Recycle, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 const Benefit = () => {
   return (
     <section
       id="benefit"
-      className="px-8 py-16 lg:px-20 lg:py-24 bg-primary text-white  overflow-hidden"
+      className="px-8 py-16 lg:px-20 lg:py-24 bg-primary text-white space-y-12  overflow-hidden"
     >
       <div className=" z-10">
         <div className="  mb-16  space-y-3">
@@ -81,6 +82,16 @@ const Benefit = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className=" w-full ">
+        <Image
+          src="/children.jpg"
+          alt="Drone waste management solution overview"
+          width={600}
+          height={400}
+          className="w-full max-w-6xl mx-auto h-[400px] object-cover transition-all duration-700 ease-in-out"
+          priority
+        />
       </div>
     </section>
   );

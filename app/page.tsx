@@ -6,6 +6,8 @@ import Technical from "./components/technical";
 import Benefit from "./components/benefit";
 import NextStep from "./components/next-step";
 import Footer from "./components/footer";
+import { HowitWorks } from "./components/how-it-works";
+import HowItWorkCard from "./components/how-it-work-card";
 
 const Page = () => {
   return (
@@ -14,6 +16,7 @@ const Page = () => {
       <div className="" id="about">
         <Problem />
         <Solution />
+        <HowitWorks />
         <Technical />
         <Benefit />
       </div>
