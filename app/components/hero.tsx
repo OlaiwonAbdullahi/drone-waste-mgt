@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       <svg
-        className="absolute bottom-0 left-0 w-full h-[60px] sm:h-[80px] lg:h-[120px]"
+        className="absolute bottom-0 border border-none left-0 w-full h-[60px] sm:h-[80px] lg:h-[120px]"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"

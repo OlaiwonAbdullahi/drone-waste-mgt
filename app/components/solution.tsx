@@ -57,7 +57,6 @@ const Solution: React.FC = () => {
     <section id="solution" className="bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex md:flex-row-reverse flex-col items-start justify-between gap-16 px-8 py-16 lg:px-20 lg:py-24">
-          {/* Left side (Text) */}
           <div className="flex flex-col items-start justify-start space-y-8 max-w-2xl">
             <h2 className="font-semibold playfair text-3xl lg:text-4xl text-primary uppercase leading-tight tracking-wide">
               Solution

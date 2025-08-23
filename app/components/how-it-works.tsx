@@ -37,15 +37,15 @@ export function HowitWorks() {
   ];
 
   return (
-    <div className="h-[402px] space-y-10 mb-10">
+    <div className=" space-y-10 mb-10">
       <h2 className="font-semibold text-center  text-3xl lg:text-4xl text-primary uppercase leading-tight tracking-wide">
         How It Works
       </h2>
-      <Carousel className="w-full max-w-5xl mx-auto h-[402px] rounded-none">
+      <Carousel className="md:w-full w-3/5 max-w-5xl mx-auto md:h-[402px] h-fit rounded-none">
         <CarouselContent>
           {steps.map((step, index) => (
             <CarouselItem key={index}>
-              <Card className="h-[402px] p-0 rounded-none border border-primary/20">
+              <Card className="md:h-[402px] h-fit p-0 rounded-none border border-primary/20">
                 <CardContent className="p-0">
                   <HowItWorkCard
                     icon={step.icon}

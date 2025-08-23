@@ -7,7 +7,6 @@ import Benefit from "./components/benefit";
 import NextStep from "./components/next-step";
 import Footer from "./components/footer";
 import { HowitWorks } from "./components/how-it-works";
-import HowItWorkCard from "./components/how-it-work-card";
 
 const Page = () => {
   return (

@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 export default function NextSteps() {
   return (
     <section className="py-16 px-6 md:px-12 bg-gradient-to-r from-primary-100 to-secondary">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl  mx-auto text-center">
         <h2 className="uppercase text-3xl md:text-4xl font-bold text-primary mb-6 flex items-center justify-center gap-2">
           Join The Movement
         </h2>
 
-        <div className="space-y-4  p-6 rounded-2xl">
+        <div className="space-y-4  p-2">
           <p>
             We have already developed and deployed our AI-powered drone system
             to detect, map, and report waste in real time—delivering cleaner
