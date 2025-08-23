@@ -1,18 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Add API call or any action here
+  };
+
   return (
     <footer className="bg-primary text-secondary py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 items-start gap-8">
+        {/* Logo & Description */}
         <div>
-          <div className="">
-            <Image src={"/logo.png"} height={254} width={254} alt="logo" />
-          </div>{" "}
-          <p className="text-sm leading-relaxed">
+          <Image src={"/logo.png"} height={254} width={254} alt="logo" />
+          <p className="text-sm leading-relaxed mt-4">
             Lisa Technology summary{" "}
             <span className="font-semibold">AI-powered autonomous drones</span>{" "}
             to detect, map, and report waste and debris on roadways in real
@@ -26,66 +46,35 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li>
-              <a href="#home" className="hover:text-blue-400 transition-colors">
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="hover:text-blue-400 transition-colors"
-              >
-                LISA
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#solution"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Solution
-              </a>
-            </li>
-            <li>
-              <a
-                href="#solution"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Vertical
-              </a>
-            </li>
-            <li>
-              <a
-                href="#impact"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Benefits & Impact
-              </a>
-            </li>
-            <li>
-              <a
-                href="#impact"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Join the Movement
-              </a>
-            </li>
-            <li>
-              <a
-                href="#impact"
-                className="hover:text-blue-400 transition-colors"
-              >
-                Book A Demo
-              </a>
-            </li>
+            {[
+              "Home",
+              "LISA",
+              "Solution",
+              "Vertical",
+              "Benefits & Impact",
+              "Join the Movement",
+              "Book A Demo",
+            ].map((link, idx) => (
+              <li key={idx}>
+                <a
+                  href={`#${link
+                    .toLowerCase()
+                    .replace(/ & /g, "-")
+                    .replace(/\s+/g, "-")}`}
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
+        {/* Social Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Connect With Us
@@ -108,28 +97,43 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="">
+
+        {/* Subscribe Form */}
+        <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Subscribe For Update
           </h3>
-          <form className=" space-y-3 flex flex-col">
+          <form className="space-y-3 flex flex-col" onSubmit={handleSubmit}>
             <Input
-              type="name"
+              type="text"
+              name="firstName"
               placeholder="First Name"
-              className=" rounded-none placeholder:text-white text-white p-2"
+              className="rounded-none placeholder:text-white text-white p-2"
+              value={formData.firstName}
+              onChange={handleChange}
             />
             <Input
-              type="name"
+              type="text"
+              name="lastName"
               placeholder="Last Name"
-              className=" rounded-none placeholder:text-white text-white p-2"
+              className="rounded-none placeholder:text-white text-white p-2"
+              value={formData.lastName}
+              onChange={handleChange}
             />
             <Input
               type="email"
+              name="email"
               placeholder="Email"
-              className=" rounded-none placeholder:text-white text-white p-2"
+              className="rounded-none placeholder:text-white text-white p-2"
+              value={formData.email}
+              onChange={handleChange}
             />
-            <div className="justify-end flex">
-              <Button variant={"secondary"} className="  rounded-none  w-fit">
+            <div className="flex justify-end">
+              <Button
+                type="submit"
+                variant="secondary"
+                className="rounded-none w-fit"
+              >
                 Subscribe
               </Button>
             </div>

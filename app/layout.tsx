@@ -28,9 +28,14 @@ const mozillaHeadline = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DroneWasteMgt",
+  title: "Lisa Tech",
   description:
     "AI-powered drone waste management system by Silvera Automotives",
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
+    shortcut: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +45,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/logo.jpg" />
+      </head>
       <body
         className={`${mozillaText.variable} ${mozillaHeadline.variable} antialiased`}
       >
