@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center px-6 md:px-12 lg:px-[85px] py-16 lg:py-[70px] text-white overflow-hidden rounded-b-[60px] md:rounded-b-[80px]">
       <div className="absolute inset-0 -z-30">
         <video
-          src="https://res.cloudinary.com/du7ljfa63/video/upload/v1755691454/13772-251867974_small_myinco.mp4"
+          src="https://res.cloudinary.com/dfjm3z7es/video/upload/v1756163420/WhatsApp_Video_2025-08-25_at_22.03.46_f1919ed5_bcwuy6.mp4"
           autoPlay
           loop
           muted
